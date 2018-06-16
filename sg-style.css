@@ -1,0 +1,507 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*SG - styles -----------------------------------------------
+
+https://vk.com/sg_one
+2018 
+
+
+
+------------------------------------ Common styles -------------------------
+*/
+
+*{font-family: 'Fira Sans Condensed', sans-serif;color:#333;}
+.container{
+	max-width: 1168px;
+	margin:0 auto;
+	padding: 0 15px;
+}
+.btn{
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	font-weight: 600;
+}
+.btn-green{
+	border-radius: 10px;
+	padding: 30px 60px;
+	font-size: 24px;
+	background: #138900;
+}
+.btn-green:hover{
+	background: #0c5400;
+}
+.btn-red{
+	padding: 15px 50px 15px 15px;
+	font-size: 18px;
+	background: #a2000c;
+	border-radius: 5px;
+	position: relative;
+}
+.btn-red:after{
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url('/wp-content/themes/personal/img/arrow-btn.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	position: absolute;
+	right: 15px;
+	top:12px; 
+}
+.hidden{
+	opacity: 0;
+  	animation-duration: 2s;
+}
+.flex-container-right{
+	display: flex;
+	justify-content: flex-end;
+}
+h2{
+	color: #b61212;
+	font-size: 24px;
+	font-weight: 600;
+}
+body{}
+.body-first-bg{
+	background:#f3f3f3;
+	background-image: url('/wp-content/themes/personal/img/header-bg.png');
+	background-size: 2186px;
+    background-repeat: no-repeat;
+    background-position: -355px top;
+	padding-bottom: 40px;
+	box-shadow: 0px 20px 21px 0px rgba(234,234,234,1);
+	margin-bottom: 30px;
+
+}
+header{}
+.header-first{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-bottom: 20px!important;
+
+}
+	header nav{
+		flex-grow: 4;
+	}
+		header nav ul{
+			display: flex;
+			justify-content: space-around;
+			
+		}
+			header nav ul li{}
+				header nav ul li{}
+					header nav ul li a{
+						text-decoration: none;
+						font-weight: 600;
+						font-size: 16px;
+						color: #333333;
+						border:1px solid rgba(0,0,0,0);
+						border-radius: 6px;
+						padding: 10px 20px;
+					}
+					header nav ul li a:hover{
+						border-color: #a2000c;
+					}
+					header nav ul li.current_page_item a{
+						border-color: #a2000c;
+						background: #a2000c;
+						color: #fff;
+					}
+	header .social-links{
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		height: 82px;
+		background: #fff;
+		border-bottom-left-radius: 6px; 
+		border-bottom-right-radius: 6px; 
+		justify-content: center;
+	}
+	header .social-links p{
+		display: inline-block;
+		padding-right: 10px;
+	}
+	header .social-links p:last-child{
+		padding-right: 0;
+	}
+	header .social-links p a{
+		display: inline-block;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 16px;
+		color: #333333;
+	}
+	header .social-links p a img{
+		display: inline-block;
+		padding-right: 5px;
+		width: 38px;
+	}
+	header .social-links p a span{
+		display: inline-block;
+		line-height: 43px;
+		vertical-align: top;
+	}
+	#mobile-menu{
+		display: none;
+		padding: 0 10px;
+	}
+	#mobile-menu i{
+		font-size: 32px;
+		color: #a2000c;		
+	}
+.header-second{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}	
+	.header-second .logo-top{
+		position: relative;
+	}	
+
+	.header-second .logo-top p{
+		font-size: 14px;
+		font-weight: 600;
+		text-align: right;
+	}	
+		.header-second .logo-top a{
+			display: inline-block;
+			color: #1150aa;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+		}	
+			.header-second .logo-top a img{
+				width: 355px;
+			}	
+	.header-second .video-top{
+		padding-left: 40px;
+		flex-grow: 4;
+	}
+.header-third{
+	display: flex;
+	justify-content: flex-end;
+}
+	.header-third p{
+		font-weight: 600;
+		font-size: 48px;
+		margin:30px 0;
+		text-align: right;
+	}
+	.header-third  h1{
+		font-size: 95px;
+		margin: 40px 0; 
+	}
+	.header-third p.center{
+		text-align: center;
+		font-weight: 100;
+		font-size: 50px;
+	}
+.header-third .btn{
+	margin:60px 80px 60px 0;
+}
+.footer-1{
+	padding: 35px 0 190px 0;
+}
+	.footer-1 h2{
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+	.footer-1 .partners{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+.footer-2{
+	background: #363636;
+	color: #fff;
+	padding: 50px 0 30px 0;
+}
+	.footer-2-flex{
+		display: flex;
+		justify-content: space-around;
+	}
+	.footer-logo{
+		display: flex;
+		align-content: space-between;
+		flex-wrap:wrap;
+		max-width: 280px; 
+	}	
+	.footer-logo p{
+		color: #fff;
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.footer-logo p span{
+		font-size: 28px;
+		color: #fff;
+	}
+		.footer-logo img{
+			width: 278px;
+			display: inline-block;
+		}
+.footer-2 h3{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 24px;
+	margin:0 0 30px 0;
+}
+	.bottom-nav{}			
+		.bottom-nav ul{
+			margin-left: 15px;
+		}			
+		.bottom-nav li{
+			margin-bottom: 20px;
+		}			
+		.bottom-nav li:last-child{
+			margin-bottom: 0px;
+
+		}
+		.bottom-nav a{
+			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
+			text-decoration: none;
+		}
+	.footer-social{
+		margin-bottom: 30px;
+	}				
+	.footer-social p a{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}				
+	.footer-social p{
+		color: #fff;
+		margin: 10px 0;		
+	}
+	.footer-social p a{
+		color: #fff;		
+		font-size: 16px;
+		text-decoration: none;
+	}				
+	.footer-social p a img{
+		display: inline-block;
+		padding-right: 5px;
+	}
+.footer-3{
+	background: #363636;
+}
+.footer-3 .container{
+	display: flex;
+	justify-content: space-between;
+	padding: 25px 0 25px 0;
+	border-top:1px solid #e8e8e8;
+
+}
+	.footer-3 a{
+		color: #fff;
+		padding: 0 10px;
+	}
+	.footer-3 .container>a{
+		text-decoration: none;
+	}
+	.footer-3 p{
+		color: #fff;
+	}
+		.footer-3 p a{}
+/*--------------------------------------   Main page styless----------------------------------------------------*/
+.main-page-1{
+	display: flex;
+	justify-content: space-between;
+	margin: 80px auto;
+}
+	.main-page-1-baner{
+		max-width: 650px;
+		width: 100%;
+		min-height: 212px;
+		background: #e8e8e8;
+		padding: 15px;
+		background-image: url(/wp-content/themes/personal/img/baner1-bg-mainpage.png);
+		background-repeat: no-repeat;
+		background-size: 200px;
+		background-position: left -36px bottom -30px;
+	}
+	.main-page-1-baner h2{
+		margin: 35px 0 15px 195px;
+	}
+	.main-page-1-baner p{
+		max-width: 360px;
+		margin-left: 195px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.main-page-1-ministr{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}	
+	.main-page-1-ministr img{
+		width: 165px;
+		display: inline-block;
+		margin: 0 30px;
+	}
+	.main-page-1-ministr h2{
+
+	}
+.main-page-2{
+	background: #363636;
+	padding: 65px 0 80px 0;
+}	
+	.main-page-2 h2{
+		color: #e8e8e8;
+		font-size: 36px;
+		margin: 0 0 45px 0;
+		font-weight: 500;
+		text-transform: uppercase;
+	}	
+	.main-page-2 .pt-cv-wrapper .pt-cv-content-item img , .main-page-3 .pt-cv-wrapper .pt-cv-content-item img{
+		 -webkit-filter: grayscale(100%);
+		  -moz-filter: grayscale(100%);
+		  -ms-filter: grayscale(100%);
+		  -o-filter: grayscale(100%);
+		  filter: grayscale(100%);
+	}
+	.main-page-2 .pt-cv-wrapper .pt-cv-content-item:hover img, .main-page-3  .pt-cv-wrapper .pt-cv-content-item:hover img{
+		   -webkit-filter: grayscale(0%);
+		  -moz-filter: grayscale(0%);
+		  -ms-filter: grayscale(0%);
+		  -o-filter: grayscale(0%);
+		  filter: grayscale(0%);
+
+	}
+	.main-page-2 .pt-cv-ifield{
+		text-align: center;
+	}
+	.main-page-2 .pt-cv-ifield .pt-cv-title {
+		text-align: initial;
+		margin-top: 20px!important;
+	}
+	.main-page-2 .pt-cv-ifield .pt-cv-title a{
+		font-size: 27px;
+		color: #e8e8e8;
+		margin: 25px 0;
+		text-align: justify;
+		font-weight: 500;
+	}
+.main-page-2 .pt-cv-content{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: initial;
+}
+	.main-page-2 .pt-cv-content a{
+		float: right;
+		padding: 15px 50px 15px 15px;
+		font-size: 18px;
+		background:#e8e8e8;
+		border-radius: 5px;
+		position: relative;
+		line-height: 1;
+		border:none;
+		color: #333333;
+		margin-top: 45px;
+	}
+	.main-page-2 .pt-cv-content a:hover{
+		color: #fff;
+		background: #a2000c;
+	}
+	.main-page-2 .pt-cv-content a:hover:after{
+		background: url('/wp-content/themes/personal/img/arrow-btn.png');		
+	}
+	.main-page-2 .pt-cv-content a:after{
+		content: '';
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background: url('/wp-content/themes/personal/img/arrow-dark-btn.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		position: absolute;
+		right: 15px;
+		top:12px; 
+	}
+.main-page-3{
+	padding: 145px 0 145px 0;
+}
+	.main-page-3 h2{
+		text-transform: uppercase;
+		font-size: 36px;
+		margin-bottom: 45px;
+		font-weight: 500;
+	}
+.main-page-3 .pt-cv-content a{display: none;}
+.main-page-3 .pt-cv-title{
+	font-size: 27px;
+	margin:20px 0;
+}
+	.main-page-3 .pt-cv-title a{
+		color: #b61212;
+	}
+.main-page-3 .pt-cv-content{
+	font-size: 18px;
+}
+
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
